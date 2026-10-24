@@ -19,7 +19,7 @@
 </head>
 <body>
     <h1>Guilt Trip — Privacy Policy</h1>
-    <p class="date">Effective date: July 19, 2026</p>
+    <p class="date">Effective date: July 19, 2026 · Last updated: October 25, 2026</p>
 
     <h2>Overview</h2>
     <p>Guilt Trip is an Android digital-wellbeing app that helps you interrupt your own doomscrolling with a persona overlay. Your privacy is important to us. This policy explains what data the app does and does not handle.</p>
@@ -38,7 +38,12 @@
     <p>This data is processed in memory for a fraction of a second per check, never written to disk in raw form, and never transmitted anywhere. Google Play's Data Safety framework classifies this as <em>App activity → App interactions → Processed ephemerally</em>.</p>
 
     <h2>Local storage</h2>
-    <p>The app stores your own configuration on your device using Android's DataStore. This includes which of the 15 monitored apps you have enabled, the per-app time budget you have set, whether the master switch is on or off, whether you have completed onboarding, and the timestamp of the app's most recent internal heartbeat. This configuration never leaves your device and is deleted when you uninstall the app.</p>
+    <p>The app stores two kinds of information, <strong>only on your device</strong>:</p>
+    <ul>
+        <li><strong>Your settings</strong> (Android's DataStore): which of the 15 monitored apps you have enabled, the per-app time budget you have set, whether the master switch is on or off, whether you have completed onboarding, your chosen theme and persona, and the timestamp of the app's most recent internal heartbeat.</li>
+        <li><strong>Your guilt-trip history</strong> (an on-device database): each time the app shows you a popup, and whether you closed the app or snoozed, it records the time, the date and hour, and which monitored app it was for. This powers your daily count, the 7-day chart, your stats, streaks and "weakest hour". It contains nothing about what you did inside those apps.</li>
+    </ul>
+    <p>Neither ever leaves your device. The history is kept until you uninstall the app or clear its data (Android Settings → Apps → Guilt Trip → Storage → Clear data); both remove everything the app has stored.</p>
 
     <h2>Permissions the app uses and why</h2>
     <table>
