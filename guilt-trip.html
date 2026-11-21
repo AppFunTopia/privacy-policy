@@ -19,13 +19,13 @@
 </head>
 <body>
     <h1>Guilt Trip — Privacy Policy</h1>
-    <p class="date">Effective date: July 19, 2026 · Last updated: October 25, 2026</p>
+    <p class="date">Effective date: July 19, 2026 · Last updated: November 21, 2026</p>
 
     <h2>Overview</h2>
     <p>Guilt Trip is an Android digital-wellbeing app that helps you interrupt your own doomscrolling with a persona overlay. Your privacy is important to us. This policy explains what data the app does and does not handle.</p>
 
     <h2>Data we collect</h2>
-    <p><strong>None.</strong> Guilt Trip does not collect, store, transmit, sell, or share any personally identifiable information. There is no user account, no login, no cloud sync, and no telemetry. The app does not communicate with any server.</p>
+    <p><strong>None.</strong> Guilt Trip does not collect, store, transmit, sell, or share any personally identifiable information. The only way anything leaves the app is if you share your verdict card yourself (see below). There is no user account, no login, no cloud sync, and no telemetry. The app does not communicate with any server.</p>
 
     <h2>What the app reads on your device</h2>
     <p>To do its job, Guilt Trip reads one type of information from Android, entirely on your device: <strong>foreground-app events</strong>. Android's <code>UsageStatsManager</code> API tells Guilt Trip which social-media app is currently on top of your screen, and when you opened it — the same information the built-in Android Digital Wellbeing feature uses.</p>
@@ -40,19 +40,27 @@
     <h2>Local storage</h2>
     <p>The app stores two kinds of information, <strong>only on your device</strong>:</p>
     <ul>
-        <li><strong>Your settings</strong> (Android's DataStore): which of the 15 monitored apps you have enabled, the per-app time budget you have set, whether the master switch is on or off, whether you have completed onboarding, your chosen theme and persona, and the timestamp of the app's most recent internal heartbeat.</li>
-        <li><strong>Your guilt-trip history</strong> (an on-device database): each time the app shows you a popup, and whether you closed the app or snoozed, it records the time, the date and hour, and which monitored app it was for. This powers your daily count, the 7-day chart, your stats, streaks and "weakest hour". It contains nothing about what you did inside those apps.</li>
+        <li><strong>Your settings</strong> (Android's DataStore): which of the 15 monitored apps you have enabled, the per-app time budget you have set, whether the master switch is on or off, whether you have completed onboarding, your chosen theme and persona, the optional goal you typed (if any), the weekly case: which days the app was watching, when the current week started, and a summary of your last verdict (the verdict, the week's counts, your most-opened monitored app and your most-picked excuse), and the timestamp of the app's most recent internal heartbeat.</li>
+        <li><strong>Your guilt-trip history</strong> (an on-device database): each time the app shows you a popup, and whether you closed the app or snoozed, it records the time, the date and hour, and which monitored app it was for. This powers your daily count, the 7-day chart, your stats, streaks and "weakest hour". It contains nothing about what you did inside those apps. When you talk back to the judge, it also records which of the six preset excuses you picked (for example "just one more"); you never type anything there.</li>
     </ul>
     <p>Neither ever leaves your device. The history is kept until you uninstall the app or clear its data (Android Settings → Apps → Guilt Trip → Storage → Clear data); both remove everything the app has stored.</p>
+
+    <h2>Sharing or saving your verdict card</h2>
+    <p>Once a week the app gives you a verdict and shows it on a card. The card is made on your device and shows your verdict, your guilt-trip counts for the week, the monitored app you opened most and the excuse you picked most. Nothing is shared unless you tap a button:</p>
+    <ul>
+        <li><strong>Send to the group chat</strong> opens Android's own share sheet. You pick the app and the person; the card image goes only there. We never see it and never choose a target for you.</li>
+        <li><strong>Save image</strong> saves the card to your phone's Pictures/Guilt Trip folder through Android's media store. No storage permission is needed for this.</li>
+    </ul>
 
     <h2>Permissions the app uses and why</h2>
     <table>
         <tr><th>Permission</th><th>Why the app uses it</th></tr>
         <tr><td>Usage access</td><td>To detect when you open a monitored social-media app so a timer can start.</td></tr>
         <tr><td>Display over other apps</td><td>To show the persona overlay on top of the monitored app when your time budget is exceeded.</td></tr>
-        <tr><td>Notifications</td><td>For the persistent "Guilt Trip is on" notification while running, and as a fallback interruption if you have revoked the overlay permission.</td></tr>
+        <tr><td>Notifications</td><td>For the persistent "Guilt Trip is on" notification while running, a once-a-week "The verdict is in" notification, and as a fallback interruption if you have revoked the overlay permission.</td></tr>
         <tr><td>Foreground service (specialUse)</td><td>To keep the app watching for foreground-app changes in real time.</td></tr>
         <tr><td>Full-screen intent</td><td>Only used as a fallback for the overlay when you have revoked overlay permission.</td></tr>
+        <tr><td>Run at startup</td><td>To turn monitoring back on after your phone restarts, only if you left Guilt Trip switched on.</td></tr>
         <tr><td>Ignore battery optimizations</td><td>Optional. Only requested when you actively tap "Allow unrestricted battery" on the in-app "Make reliable" screen. Never requested during onboarding.</td></tr>
     </table>
     <p>The app does <em>not</em> request the <code>QUERY_ALL_PACKAGES</code> permission (we cannot scan your full app list), the <code>BIND_ACCESSIBILITY_SERVICE</code> permission (we do not use Android accessibility APIs), or any permission for location, contacts, camera, microphone, calendar, or storage.</p>
