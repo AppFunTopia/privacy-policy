@@ -63,7 +63,7 @@
         <tr><td>Foreground service (specialUse)</td><td>To keep the app watching for foreground-app changes in real time.</td></tr>
         <tr><td>Full-screen intent</td><td>Only used as a fallback for the overlay when you have revoked overlay permission.</td></tr>
         <tr><td>Run at startup</td><td>To turn monitoring back on after your phone restarts, only if you left Guilt Trip switched on.</td></tr>
-        <tr><td>Ignore battery optimizations</td><td>Optional. Only requested when you actively tap "Allow unrestricted battery" on the in-app "Make reliable" screen. Never requested during onboarding.</td></tr>
+        <tr><td>Ignore battery optimizations</td><td>Optional. Only requested when you actively tap "Let Guilt Trip run in the background" on the in-app "Make reliable" screen, which appears only after the app detects that your device has put it to sleep. Never requested during onboarding.</td></tr>
     </table>
     <p>The app does <em>not</em> request the <code>QUERY_ALL_PACKAGES</code> permission (we cannot scan your full app list), the <code>BIND_ACCESSIBILITY_SERVICE</code> permission (we do not use Android accessibility APIs), or any permission for location, contacts, camera, microphone, calendar, or storage.</p>
 
